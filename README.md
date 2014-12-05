@@ -40,7 +40,7 @@ Since you'll be using the dotfiles command on subsequent runs, you'll only have 
 bash -c "$(curl -fsSL https://raw.github.com/raphamorim/raphaDotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
-### About 
+## About 
 
 Copyright (c) 2014 "Robin" Raphael Amorim
 
