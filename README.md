@@ -43,4 +43,5 @@ bash -c "$(curl -fsSL https://raw.github.com/raphamorim/raphaDotfiles/master/bin
 ### About 
 
 Copyright (c) 2014 "Robin" Raphael Amorim
+
 Licensed under the MIT license.
