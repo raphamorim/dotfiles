@@ -29,7 +29,7 @@ Not yet.
 ```sh
 export github_user=YOUR_GITHUB_USER_NAME
 
-bash -c "$(curl -fsSL https://raw.github.com/$github_user/raphaDotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL  https://raw.githubusercontent.com/$github_user/raphaDotfiles/master/install.sh)" && source ~/.bashrc
 ```
 
 Since you'll be using the dotfiles command on subsequent runs, you'll only have to export the github_user variable for the initial install.
@@ -37,10 +37,10 @@ Since you'll be using the dotfiles command on subsequent runs, you'll only have 
 ### Actual installation (for me)
 
 ```sh
-bash -c "$(curl -fsSL https://raw.github.com/raphamorim/raphaDotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/raphamorim/raphaDotfiles/master/install.sh)" && source ~/.bashrc
 ```
 
-## License 
+## License
 
 Copyright (c) 2014 "Robin" Raphael Amorim
 
