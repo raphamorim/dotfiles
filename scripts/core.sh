@@ -10,9 +10,6 @@ if [ "$(uname)" == "Darwin" ]; then
        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
        echo "\nUpdating Brew and Installing Git..."
        brew update && brew install git
-       echo "Running git config..."
-       git config --global user.name $gitConfigName
-       git config --global user.email $gitConfigEmail
        echo "\nInstalling Python..."
        brew install python
        echo "\nInstalling Pip..."
