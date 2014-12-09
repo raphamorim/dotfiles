@@ -4,8 +4,6 @@
 PWD=pwd
 version=1.0
 title="RaphaDotfiles"
-gitConfigName="Raphael Amorim"
-gitConfigEmail="rapha850@gmail.com"
 
 # MAIN Routine
 # > Presentation
