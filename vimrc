@@ -1,4 +1,6 @@
-"q Configuration file for vim
+" Raphamorim's vimrc file from raphaDotfiles
+" https://github.com/raphamorim/raphaDotfiles
+
 set modelines=0		" CVE-2007-2438
 
 set nowrap
