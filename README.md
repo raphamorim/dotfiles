@@ -12,15 +12,6 @@ The second option seems to be more quiet, but it would be better the first optio
 
 ## Installation
 
-### OS X notes
-Not yet.
-
-### Ubuntu notes
-Not yet.
-
-### Debian notes
-Not yet.
-
 ###  Actual installation (for you)
 
 1. Fork this repo
