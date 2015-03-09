@@ -2,7 +2,6 @@
 
 echo "\n[INSTALLING] Core Workflow\n"
 
-
 # Mac OS X platform
 if [ "$(uname)" == "Darwin" ]; then
        echo "Installing on OS X...."
@@ -10,6 +9,11 @@ if [ "$(uname)" == "Darwin" ]; then
        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
        echo "\nUpdating Brew and Installing Git..."
        brew update && brew install git
+       echo "\nDefining git aliases..."
+       git config --global alias.co checkout
+       git config --global alias.br branch
+       git config --global alias.ci commit
+       git config --global alias.st status
        echo "\nInstalling Python..."
        brew install python
        echo "\nInstalling Pip..."

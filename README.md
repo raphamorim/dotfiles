@@ -14,21 +14,11 @@ The second option seems to be more quiet, but it would be better the first optio
 
 ###  Actual installation (for you)
 
-1. Fork this repo
-2. Open a terminal/shell and do this:
+1. Fork and Clone this repo
+2. Open this repository on terminal/shell and run:
 
 ```sh
-export github_user=YOUR_GITHUB_USER_NAME
-
-bash -c "$(curl -fsSL  https://raw.githubusercontent.com/$github_user/raphaDotfiles/master/install.sh)" && source ~/.bashrc
-```
-
-Since you'll be using the dotfiles command on subsequent runs, you'll only have to export the github_user variable for the initial install.
-
-### Actual installation (for me)
-
-```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/raphamorim/raphaDotfiles/master/install.sh)" && source ~/.bashrc
+sh install.sh
 ```
 
 ## License
