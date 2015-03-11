@@ -26,6 +26,8 @@ if [ "$(uname)" == "Darwin" ]; then
        brew install go
        echo "\nInstalling Jekyll..."
        gem install jekyll
+       echo "\nInstalling Mosh..."
+       brew install mosh
        echo "\nInstalling Tmux..."
        brew install tmux
 
