@@ -26,6 +26,8 @@ if [ "$(uname)" == "Darwin" ]; then
        brew install go
        echo "\nInstalling Jekyll..."
        gem install jekyll
+       echo "\nInstalling Tmux..."
+       brew install tmux
 
 # Linux platform
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
