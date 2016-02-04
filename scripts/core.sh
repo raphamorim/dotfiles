@@ -7,6 +7,8 @@ if [ "$(uname)" == "Darwin" ]; then
        echo "Installing on OS X...."
        echo "\nInstalling HomeBrew..."
        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+       echo "\nInstalling zsh..."
+       sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
        echo "\nUpdating Brew and Installing Git..."
        brew update && brew install git
        echo "\nDefining git aliases..."
