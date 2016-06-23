@@ -21,6 +21,10 @@ The second option seems to be more quiet, but it would be better the first optio
 sh install.sh
 ```
 
+## Hints/Guides about:
+
+- [tmux shortcuts](https://gist.github.com/MohamedAlaa/2961058)
+
 ## License
 
 Copyright (c) 2014 "Robin" Raphael Amorim
