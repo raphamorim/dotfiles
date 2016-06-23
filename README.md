@@ -1,6 +1,6 @@
 #Rapha's Dotfiles
 
-> This dotfiles about to rock your world
+> My Dotfiles
 
 ## About
 I was tired of being configured manually every time changed my work machine. So I decided to create my own dotfiles, the problem is compatibility: The dotfiles should work on OS X, Debian and Ubuntu. The installation routine can be changed when OS change.
@@ -27,6 +27,6 @@ sh install.sh
 
 ## License
 
-Copyright (c) 2014 "Robin" Raphael Amorim
+Copyright (c) 2014(6) "Robin" Raphael Amorim
 
 Licensed under the MIT license.
