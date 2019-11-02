@@ -1,6 +1,4 @@
-" Raphamorim's vimrc file from raphaDotfiles
-" https://github.com/raphamorim/raphaDotfiles
-
+"q Configuration file for vim
 set modelines=0		" CVE-2007-2438
 
 set nowrap
@@ -81,6 +79,32 @@ filetype plugin indent on
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 set pastetoggle=<F2>
 
+"Little trick that uses terminal's bracketed paste mode to automatically set/unset Vim's paste mode when you paste
+function! WrapForTmux(s)
+  if !exists('$TMUX')
+    return a:s
+  endif
+
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
+
+  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+endfunction
+
+let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+" End of trick
+
+
 set laststatus=2
 
 set encoding=utf-8  " Define file to utf-8
@@ -157,6 +181,31 @@ let g:airline#extensions#tmuxline#enabled = 0
 
 set noswapfile " Disable .swp file create
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Fix screen flashing in Vim
+set visualbell
+set t_vb=
+
+" Mappings to access buffers (don't use "\p" because a
+" delay before pressing "p" would accidentally paste).
+" \l       : list buffers
+" \b \f \g : go back/forward/last-used
+" \1 \2 \3 : go to buffer 1/2/3 etc
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>g :e#<CR>
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
+" It's useful to show the buffer number in the status line.
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
