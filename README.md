@@ -1,4 +1,4 @@
-#Rapha's Dotfiles
+# Dotfiles
 
 > My Dotfiles
 
