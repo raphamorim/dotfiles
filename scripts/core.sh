@@ -32,6 +32,8 @@ if [ "$(uname)" == "Darwin" ]; then
        brew install mosh
        echo "\nInstalling Tmux..."
        brew install tmux
+       echo "\nInstalling Ripgrep..."
+       brew install ripgrep
 
 # Linux platform
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
