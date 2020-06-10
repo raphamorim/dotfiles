@@ -7,8 +7,8 @@ if [ "$(uname)" == "Darwin" ]; then
        echo "Installing on OS X...."
        echo "\nInstalling HomeBrew..."
        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-       echo "\nInstalling zsh..."
-       sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+       #echo "\nInstalling zsh..."
+       #sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
        echo "\nUpdating Brew and Installing Git..."
        brew update && brew install git
        echo "\nDefining git aliases..."
@@ -16,24 +16,18 @@ if [ "$(uname)" == "Darwin" ]; then
        git config --global alias.br branch
        git config --global alias.ci commit
        git config --global alias.st status
-       echo "\nInstalling Python..."
-       brew install python
-       echo "\nInstalling Pip..."
-       easy_install pip
-       echo "\nInstalling Virtualenv..."
-       pip install virtualenv
        echo "\nInstalling NodeJs and NPM..."
        brew install node
-       echo "\nInstalling Golang..."
-       brew install go
+       echo "\nInstalling Rust..."
+       brew install rust
        echo "\nInstalling Jekyll..."
        gem install jekyll
-       echo "\nInstalling Mosh..."
-       brew install mosh
        echo "\nInstalling Tmux..."
        brew install tmux
-       echo "\nInstalling Ripgrep..."
-       brew install ripgrep
+       echo "\Installing python3"
+       brew install python3
+       echo "\Installing Z"
+       brew install z
 
 # Linux platform
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
