@@ -28,6 +28,8 @@ if [ "$(uname)" == "Darwin" ]; then
        brew install python3
        echo "\Installing Z"
        brew install z
+       echo "\Installing Unrar for Mac (unrar x <filename>)"
+       brew install unrar
 
 # Linux platform
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
