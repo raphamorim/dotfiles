@@ -1,5 +1,7 @@
 #!/bin/sh
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 echo "\n[INSTALLING] Core Workflow\n"
 
 # Mac OS X platform
@@ -31,26 +33,7 @@ if [ "$(uname)" == "Darwin" ]; then
        echo "\Installing Unrar for Mac (unrar x <filename>)"
        brew install unrar
 
-# Linux platform
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-        echo "Installing on Linux plataform...."
-        apt-get update
-        apt-get -y install aptitude
-
-        aptitude -y install \
-            vim-gnome make httpie \
-            python-setuptools python-dev \
-            tmux screen \
-            sudo curl htop git
-
-        easy_install pip
-        pip install virtualenv
-
-# Windows NT platform
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-        echo "This is a joke, right?"
-
-fi
+echo "PROMPT='%F{blue}%2~%f ◼ '" >> ~/.zshrc
 
 echo "\nDONE - vim workflow\n"
 
